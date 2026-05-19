@@ -127,7 +127,7 @@ transition:
 
     width: 120px;
 
-    top: -10px;   /* 👈 move it higher */
+    top: -240px;   /* 👈 move it higher */
 
     left: 50%;
     transform: translateX(-50%);
