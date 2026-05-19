@@ -334,43 +334,5 @@ transform: scale(1.05) rotate(1deg);
 }
 
 
-/* animation swish */
-@keyframes swish-right {
 
-    0% {
-        transform: rotate(0deg);
-    }
 
-    50% {
-        transform: rotate(3deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-
-}
-
-@keyframes swish-left {
-
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(-3deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-
-}
-
-.swish-right {
-    animation: swish-right 0.5s ease;
-}
-
-.swish-left {
-    animation: swish-left 0.5s ease;
-}
