@@ -7,6 +7,28 @@ function scrollGallery(direction) {
         behavior: "smooth"
     });
 
+    // ALL POLAROIDS
+    const polaroids = document.querySelectorAll(".polaroid");
+
+    polaroids.forEach(photo => {
+
+        if(direction === 1) {
+
+            photo.style.transform = "rotate(6deg)";
+
+        } else {
+
+            photo.style.transform = "rotate(-6deg)";
+        }
+
+        setTimeout(() => {
+
+            photo.style.transform = "";
+
+        }, 300);
+
+    });
+
 }
 
 function openImage(image) {

@@ -42,6 +42,10 @@ body {
 /* POLAROID */
 
 .polaroid {
+transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
     position: relative;
 
     background: white;
@@ -57,6 +61,8 @@ body {
     text-align: center;
 
     flex-shrink: 0;
+
+    animation: sway 4s ease-in-out infinite;
 }
 
 /* PHOTO */
@@ -79,7 +85,9 @@ body {
 /* HOVER */
 
 .polaroid:hover {
-    transform: scale(1.05);
+transform: scale(1.05) rotate(1deg);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 /* RANDOM ROTATIONS */
@@ -194,4 +202,91 @@ body {
 /* Graduation Cap */
 * {
   cursor: url('https://cdn.cursors-4u.net/previews/graduation-cap-b66c2f64-32.webp') 33 36, auto !important;
+}
+
+
+@keyframes sway {
+
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+
+}
+
+.rotate-left {
+    animation-duration: 5s;
+}
+
+.rotate-right {
+    animation-duration: 3.5s;
+}
+
+
+/* mobile friendly*/
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .gallery-title {
+        font-size: 28px;
+    }
+
+    .gallery-container {
+        gap: 30px;
+
+        padding: 20px;
+    }
+
+    .polaroid {
+        width: 180px;
+
+        padding: 10px 10px 70px 10px;
+    }
+
+    .polaroid img {
+        height: 220px;
+    }
+
+    .polaroid p {
+        font-size: 14px;
+    }
+
+    .arrow {
+        width: 45px;
+    }
+
+    .popup-image {
+        max-width: 95%;
+        max-height: 75%;
+    }
+
+    .close-btn {
+        width: 45px;
+    }
+
+    .rope {
+        width: 80px;
+
+        top: -80px;
+    }
+
 }
