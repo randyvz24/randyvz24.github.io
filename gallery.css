@@ -46,19 +46,15 @@ body {
 
     background: white;
 
-outline: 3px solid #dcdcdc;
-
-padding: 15px 15px 90px 15px;
+    padding: 15px 15px 90px 15px;
 
     width: 250px;
 
+    outline: 3px solid #dcdcdc;
+
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 
-    border: 2px solid #eee;
-
     text-align: center;
-
-    transition: 0.3s;
 
     flex-shrink: 0;
 }
@@ -104,9 +100,12 @@ padding: 15px 15px 90px 15px;
     width: 120px;
 
     top: -110px;
+
     left: 50%;
 
     transform: translateX(-50%);
+
+    z-index: -1;
 
     pointer-events: none;
 }
