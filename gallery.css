@@ -122,17 +122,6 @@ transition:
 
 /* STRING */
 
-.rope {
-    position: absolute;
-
-    width: 120px;
-
-    top: -240px;   /* 👈 move it higher */
-
-    left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none;
-}
 /* ARROWS */
 
 .arrow {
@@ -284,11 +273,6 @@ transition:
         width: 45px;
     }
 
-    .rope {
-        width: 80px;
-
-        top: -80px;
-    }
 
 }
 
