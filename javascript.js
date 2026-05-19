@@ -7,25 +7,26 @@ function scrollGallery(direction) {
         behavior: "smooth"
     });
 
-    // ALL POLAROIDS
     const polaroids = document.querySelectorAll(".polaroid");
 
     polaroids.forEach(photo => {
 
+        // REMOVE OLD ANIMATIONS
+        photo.classList.remove("swish-left");
+        photo.classList.remove("swish-right");
+
+        // FORCE RESTART
+        void photo.offsetWidth;
+
+        // ADD NEW SWISH
         if(direction === 1) {
 
-            photo.style.transform = "rotate(6deg)";
+            photo.classList.add("swish-right");
 
         } else {
 
-            photo.style.transform = "rotate(-6deg)";
+            photo.classList.add("swish-left");
         }
-
-        setTimeout(() => {
-
-            photo.style.transform = "";
-
-        }, 300);
 
     });
 
@@ -44,3 +45,43 @@ function closeImage() {
     document.getElementById("popup").style.display = "none";
 
 }
+
+
+
+const gallery = document.getElementById("gallery");
+
+let lastScrollLeft = 0;
+
+gallery.addEventListener("scroll", () => {
+
+    const polaroids = document.querySelectorAll(".polaroid");
+
+    if(gallery.scrollLeft > lastScrollLeft) {
+
+        polaroids.forEach(photo => {
+
+            photo.classList.remove("swish-right");
+
+            void photo.offsetWidth;
+
+            photo.classList.add("swish-right");
+
+        });
+
+    } else {
+
+        polaroids.forEach(photo => {
+
+            photo.classList.remove("swish-left");
+
+            void photo.offsetWidth;
+
+            photo.classList.add("swish-left");
+
+        });
+
+    }
+
+    lastScrollLeft = gallery.scrollLeft;
+
+});
