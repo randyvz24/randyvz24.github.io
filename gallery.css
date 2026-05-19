@@ -1,0 +1,137 @@
+/* PAGE */
+
+body {
+    background: white;
+    overflow: hidden;
+}
+
+/* TITLE */
+
+.gallery-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+/* GALLERY */
+
+.gallery-container {
+    display: flex;
+    gap: 50px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    height: 80vh;
+
+    align-items: center;
+
+    padding: 50px;
+
+    white-space: nowrap;
+}
+
+/* HIDE SCROLLBAR */
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* POLAROID */
+
+.polaroid {
+    position: relative;
+
+    background: white;
+
+    padding: 15px 15px 60px 15px;
+
+    width: 250px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    border: 2px solid #eee;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    flex-shrink: 0;
+}
+
+/* PHOTO */
+
+.polaroid img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+}
+
+/* TEXT */
+
+.polaroid p {
+    margin-top: 15px;
+
+    font-size: 16px;
+}
+
+/* HOVER */
+
+.polaroid:hover {
+    transform: scale(1.05);
+}
+
+/* RANDOM ROTATIONS */
+
+.rotate-left {
+    transform: rotate(-3deg);
+}
+
+.rotate-right {
+    transform: rotate(3deg);
+}
+
+/* STRING */
+
+.string {
+    position: absolute;
+
+    width: 2px;
+    height: 120px;
+
+    background: gray;
+
+    top: -120px;
+    left: 50%;
+}
+
+/* ARROWS */
+
+.arrow {
+    position: absolute;
+
+    top: 50%;
+
+    width: 70px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.2s;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}

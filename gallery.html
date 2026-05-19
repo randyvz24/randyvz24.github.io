@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <h1 class="gallery-title">My Memories</h1>
+
+    <!-- ARROWS -->
+    <img src="images/left-arrow.png" class="arrow left" onclick="scrollGallery(-1)">
+    <img src="images/right-arrow.png" class="arrow right" onclick="scrollGallery(1)">
+
+    <!-- GALLERY -->
+    <div class="gallery-container" id="gallery">
+
+        <!-- PHOTO 1 -->
+        <div class="polaroid">
+            <div class="string"></div>
+
+            <img src="images/photo1.jpg" alt="Photo 1">
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis pariatur possimus eligendi! Sit, atque nulla dolorem totam sequi perspiciatis rem eligendi, dolorum illum labore veniam reprehenderit fugiat commodi! Deleniti!
+            </p>
+        </div>
+
+        <!-- PHOTO 2 -->
+        <div class="polaroid rotate-left">
+            <div class="string"></div>
+
+            <img src="images/photo2.jpg" alt="Photo 2">
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quis possimus iste deserunt, omnis quod perferendis at soluta corporis, eaque, culpa sequi. Atque soluta aperiam veniam, praesentium voluptas saepe explicabo.
+            </p>
+        </div>
+
+        <!-- PHOTO 3 -->
+        <div class="polaroid rotate-right">
+            <div class="string"></div>
+
+            <img src="images/photo3.jpg" alt="Photo 3">
+
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam eveniet officiis sed magnam nam voluptatum inventore placeat architecto quo nesciunt dolore culpa ducimus porro ex recusandae quis repellendus, doloribus exercitationem.
+            </p>
+        </div>
+
+        <!-- ADD MORE HERE -->
+
+    </div>
+
+    <script src="javascript.js"></script>
+
+</body>
+</html>
