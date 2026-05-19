@@ -192,3 +192,7 @@ padding: 15px 15px 90px 15px;
 .close-btn:hover {
     transform: scale(1.1);
 }
+/* Graduation Cap */
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/graduation-cap-b66c2f64-32.webp') 33 36, auto !important;
+}
