@@ -26,20 +26,18 @@ body {
 
 .gallery-container {
     display: flex;
+
     gap: 50px;
 
     overflow-x: auto;
-    overflow-y: hidden;
+
+    overflow-y: visible;
 
     scroll-behavior: smooth;
 
-    height: 80vh;
-
     align-items: center;
 
-    padding: 50px;
-
-    white-space: nowrap;
+    padding: 120px 50px 50px 50px;
 }
 
 /* HIDE SCROLLBAR */
@@ -92,10 +90,21 @@ transition:
 
 /* HOVER */
 
+.polaroid {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    transform-origin: top center;
+}
+
 .polaroid:hover {
-transform: scale(1.05) rotate(1deg);
+
+    transform: scale(1.05);
 
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+
+    z-index: 100;
 }
 
 /* RANDOM ROTATIONS */
@@ -115,7 +124,7 @@ transform: scale(1.05) rotate(1deg);
 
     transform: translateX(-50%);
 
-    z-index: -1;
+   
 
     pointer-events: none;
 }
