@@ -131,9 +131,9 @@ transition:
 
     width: 70px;
 
-    cursor: pointer;
+  cursor: url('https://cdn.cursors-4u.net/previews/graduation-cap-b66c2f64-32.webp') 33 36, auto !important;
 
-    z-index: 10;
+    z-index: 9999;
 
     transition: 0.2s;
 }
@@ -195,7 +195,7 @@ transition:
 
     width: 60px;
 
-    cursor: pointer;
+      cursor: url('https://cdn.cursors-4u.net/previews/graduation-cap-b66c2f64-32.webp') 33 36, auto !important;
 
     transition: 0.2s;
 }
