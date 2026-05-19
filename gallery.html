@@ -25,15 +25,25 @@
     <div class="gallery-container" id="gallery">
 
         <!-- PHOTO 1 -->
-        <div class="polaroid">
-            <div class="string"></div>
+        <div class="polaroid rotate-left">
 
-            <img src="images/photo1.jpg" alt="Photo 1">
+    <!-- CUSTOM ROPE -->
+    <img src="images/rope.png" class="rope">
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis pariatur possimus eligendi! Sit, atque nulla dolorem totam sequi perspiciatis rem eligendi, dolorum illum labore veniam reprehenderit fugiat commodi! Deleniti!
-            </p>
-        </div>
+    <!-- PHOTO -->
+    <img
+        src="images/photo1.jpg"
+        alt="Photo 1"
+        class="gallery-image"
+        onclick="openImage(this)"
+    >
+
+    <!-- DESCRIPTION -->
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae est, expedita, excepturi molestias aspernatur sapiente ab laboriosam asperiores neque odit dolorum delectus natus commodi maiores voluptas. Illum fuga ab molestiae!
+    </p>
+
+</div>
 
         <!-- PHOTO 2 -->
         <div class="polaroid rotate-left">
@@ -60,6 +70,18 @@
         <!-- ADD MORE HERE -->
 
     </div>
+
+    <!-- IMAGE POPUP -->
+
+<div class="popup" id="popup">
+
+    <img src="images/close.png"
+         class="close-btn"
+         onclick="closeImage()">
+
+    <img class="popup-image" id="popup-image">
+
+</div>
 
     <script src="javascript.js"></script>
 
