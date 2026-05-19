@@ -44,9 +44,9 @@ body {
 
     scroll-behavior: smooth;
 
-    align-items: center;
+    align-items: flex-start;
 
-    padding: 120px 50px 50px 50px;
+    padding: 80px 50px 50px 50px;
 }
 
 /* HIDE SCROLLBAR */
@@ -127,11 +127,10 @@ transition:
 
     width: 120px;
 
-    bottom: 100%;   /* 👈 anchors rope ABOVE polaroid */
+    top: -160px;   /* 👈 move it higher */
+
     left: 50%;
     transform: translateX(-50%);
-
-    margin-bottom: 10px;
     pointer-events: none;
 }
 /* ARROWS */
