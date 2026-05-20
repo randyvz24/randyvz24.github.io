@@ -16,7 +16,10 @@ body {
     background-color: #fdfbf7;
 
     overflow-x: hidden;
-    overflow-y: auto;
+
+    overflow-y: hidden;
+
+    margin: 0;
 }
 
 /* TITLE */
@@ -30,21 +33,30 @@ body {
 /* GALLERY */
 
 .gallery-container {
+
     display: flex;
 
     flex-wrap: nowrap;
 
-    gap: 50px;
-
-    overflow-x: auto;
-
-    overflow-y: visible;
-
-    scroll-behavior: smooth;
+    flex-wrap: nowrap;
 
     align-items: flex-start;
 
+    gap: 50px;
+
     padding: 80px 50px 50px 50px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    white-space: nowrap;
+
+    width: 100vw;
+
+    box-sizing: border-box;
 }
 
 /* HIDE SCROLLBAR */
