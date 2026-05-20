@@ -1,22 +1,17 @@
 body {
-    -webkit-user-select: none; /* Chrome / Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE/Edge */
-    user-select: none;         /* Standard */
-}
 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
-
-/* PAGE */
-
-body {
     background-image: url("images/paper.jpg");
 
     background-size: cover;
 
     background-repeat: repeat;
 
- font-family: "Caveat", cursive;
+    font-family: "Caveat", cursive;
 
     background-color: #fdfbf7;
 
@@ -97,16 +92,7 @@ transition:
     font-size: 16px;
 }
 
-/* HOVER */
-
-.polaroid {
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-    transform-origin: top center;
-}
-
+/* HOVER */  
 .polaroid:hover {
 
     transform: scale(1.05);
@@ -116,11 +102,9 @@ transition:
     z-index: 100;
 }
 
-/* RANDOM ROTATIONS */
 
 
 
-/* STRING */
 
 /* ARROWS */
 
@@ -215,13 +199,6 @@ backdrop-filter: blur(10px);
 
 
 
-.rotate-left {
-    animation-duration: 5s;
-}
-
-.rotate-right {
-    animation-duration: 3.5s;
-}
 
 
 /* mobile friendly*/
@@ -347,7 +324,10 @@ backdrop-filter: blur(10px);
 
     width: 70px;
 
-    cursor: pointer;
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/graduation-cap-b66c2f64-32.webp') 33 36, auto !important;
+}
+
 
     transform: translateY(-50%);
 
