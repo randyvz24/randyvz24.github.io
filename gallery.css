@@ -133,7 +133,7 @@ transition:
 
   cursor: url('https://cdn.cursors-4u.net/previews/graduation-cap-b66c2f64-32.webp') 33 36, auto !important;
 
-    z-index: 9999;
+    z-index: 101;
 
     transition: 0.2s;
 }
@@ -175,7 +175,7 @@ backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
 
-    z-index: 999;
+    z-index: 103;
 }
 
 /* BIG IMAGE */
@@ -351,7 +351,7 @@ backdrop-filter: blur(10px);
 
     transform: translateY(-50%);
 
-    z-index: 1001;
+    z-index: 103;
 
     transition: 0.2s;
 }
