@@ -1,66 +1,314 @@
-/* color changing 
-:root {
-    --background: #f4f1ea;
-    --navbar: #d8cfc4;
-    --text: #222;
-}
-*/
-
-
+/* GLOBAL */
 
 body {
-    background-color: #f4f1ea;
-    color: #222;
-    font-family: Arial, sans-serif;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     margin: 0;
     padding: 0;
 
-    
+    overflow-x: hidden;
+
+    background-image: url("images/paper.jpg");
+
+    background-size: cover;
+
+    background-repeat: repeat;
+
+    background-color: #fdfbf7;
+
+    font-family: "Caveat", cursive;
 }
 
+/* CUSTOM CURSOR */
+
+* {
+    cursor: url('https://cdn.cursors-4u.net/previews/graduation-cap-b66c2f64-32.webp') 33 36, auto !important;
+}
+
+/* NAVBAR */
+
 nav {
-    background-color: #d8cfc4;
-    padding: 15px;
-    text-align: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    padding: 25px;
+
+    position: relative;
+
+    z-index: 10;
 }
 
 nav a {
-    color: black;
+
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+
+    color: black;
+
+    font-size: 28px;
+
+    transition: 0.2s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+
+    transform: scale(1.1);
+
+    opacity: 0.7;
 }
+
+/* HEADER */
 
 header {
+
     text-align: center;
-    padding: 40px;
+
+    margin-top: 20px;
+
+    position: relative;
+
+    z-index: 5;
 }
+
+header h1 {
+
+    font-size: 70px;
+
+    margin-bottom: 10px;
+}
+
+header p {
+
+    font-size: 28px;
+
+    opacity: 0.8;
+}
+
+/* MAIN IMAGE SECTION */
 
 .main-image {
-    text-align: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 50px;
+
+    position: relative;
+
+    z-index: 5;
 }
+
+/* POLAROID STYLE */
 
 .main-image img {
-    width: 300px;
-    border-radius: 10px;
+
+    width: 320px;
+
+    background: white;
+
+    padding: 15px 15px 70px 15px;
+
+    outline: 3px solid #dcdcdc;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+/* HOVER */
+
+.main-image img:hover {
+
+    transform: scale(1.04) rotate(-1deg);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* DESCRIPTION */
 
 .description {
-    width: 70%;
-    margin: auto;
-    padding: 30px;
+
     text-align: center;
+
+    width: 70%;
+
+    margin: 40px auto;
+
+    font-size: 28px;
+
+    position: relative;
+
+    z-index: 5;
 }
 
-/* Graduation Cap */
-* {
-  cursor: url('https://cdn.cursors-4u.net/previews/graduation-cap-b66c2f64-32.webp') 33 36, auto !important;
+.description h2 {
+
+    font-size: 50px;
+
+    margin-bottom: 10px;
 }
 
+/* FLOATING STICKERS */
 
+.sticker {
 
+    position: fixed;
 
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+/* INDIVIDUAL STICKERS */
+
+.sticker1 {
+
+    width: 120px;
+
+    top: 80px;
+    left: 40px;
+
+    transform: rotate(-20deg);
+}
+
+.sticker2 {
+
+    width: 100px;
+
+    bottom: 100px;
+    right: 50px;
+
+    transform: rotate(12deg);
+}
+
+.sticker3 {
+
+    width: 140px;
+
+    top: 250px;
+    right: 120px;
+
+    transform: rotate(-8deg);
+}
+
+/* PARTICLES */
+
+.particles {
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -2;
+}
+
+.particles::before,
+.particles::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 200%;
+    height: 200%;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px);
+
+    background-size: 120px 120px;
+
+    animation: floatParticles 20s linear infinite;
+}
+
+.particles::after {
+
+    animation-duration: 35s;
+
+    opacity: 0.5;
+}
+
+@keyframes floatParticles {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-200px);
+    }
+
+}
+
+/* MOBILE FRIENDLY */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    nav a {
+
+        font-size: 22px;
+    }
+
+    header h1 {
+
+        font-size: 45px;
+    }
+
+    header p {
+
+        font-size: 22px;
+
+        padding: 0 20px;
+    }
+
+    .main-image img {
+
+        width: 220px;
+
+        padding: 10px 10px 50px 10px;
+    }
+
+    .description {
+
+        width: 90%;
+
+        font-size: 22px;
+    }
+
+    .description h2 {
+
+        font-size: 38px;
+    }
+
+    .sticker1,
+    .sticker2,
+    .sticker3 {
+
+        width: 80px;
+    }
+
+}
