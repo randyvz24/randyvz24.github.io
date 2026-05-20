@@ -127,13 +127,27 @@
 
     <!-- IMAGE POPUP -->
 
+<!-- IMAGE POPUP -->
+
 <div class="popup" id="popup">
 
+    <!-- CLOSE BUTTON -->
     <img src="images/close.png"
          class="close-btn"
          onclick="closeImage()">
 
+    <!-- LEFT ARROW -->
+    <img src="images/left-arrow.png"
+         class="popup-arrow popup-left"
+         onclick="changeImage(-1)">
+
+    <!-- BIG IMAGE -->
     <img class="popup-image" id="popup-image">
+
+    <!-- RIGHT ARROW -->
+    <img src="images/right-arrow.png"
+         class="popup-arrow popup-right"
+         onclick="changeImage(1)">
 
 </div>
 
